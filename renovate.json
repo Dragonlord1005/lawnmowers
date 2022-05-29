@@ -9,5 +9,5 @@
       "matchUpdateTypes": ["patch", "minor"],
       "groupName": "dependencies (non-major)"
     }
-  ],
+  ]
 }
