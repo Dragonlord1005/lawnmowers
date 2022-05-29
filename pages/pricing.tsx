@@ -25,27 +25,28 @@ const useStyles = createStyles((theme) => ({
 }));
 
 const Pricing: NextPage = () => {
-    const { classes } = useStyles();
-    return (
-        <>
-            <div className={styles.container}>
-                <Head>
-                    <title>Pricing</title>
-                    <meta name="description" content="Our Pricing" />
-                    <link rel="icon" href="/favicon.ico" />
-                </Head>
+  const { classes } = useStyles();
+  return (
+    <>
+      <div className={styles.container}>
+        <Head>
+          <title>Pricing</title>
+          <meta name="description" content="Our Pricing" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
 
-                <main className={styles.main}>
-                    <Title align="center" className={classes.title}>
-                        Pricing
-                    </Title>
-                    <Text>
-                        It is $10 for the front lawn, $13 for both the front and back, and $15 for the front, back, and trimming.
-                    </Text>
-                </main>
-            </div>
-        </>
-    );
+        <main className={styles.main}>
+          <Title align="center" className={classes.title}>
+            Pricing
+          </Title>
+          <Text>
+            It is $10 for the front lawn, $13 for both the front and back, and
+            $15 for the front, back, and trimming.
+          </Text>
+        </main>
+      </div>
+    </>
+  );
 };
 
 export default Pricing;

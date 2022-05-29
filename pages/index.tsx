@@ -9,7 +9,6 @@ const useStyles = createStyles((theme) => ({
     fontSize: 100,
     fontWeight: 900,
     lineHeight: 1.1,
-    
 
     [theme.fn.smallerThan("sm")]: {
       fontSize: 40,
