@@ -1,14 +1,15 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import { createStyles, Title, Text } from "@mantine/core";
+import Link from "next/link";
+import { createStyles, Title, Text, Button } from "@mantine/core";
 
 const useStyles = createStyles((theme) => ({
   title: {
     fontSize: 100,
     fontWeight: 900,
     lineHeight: 1.1,
+    
 
     [theme.fn.smallerThan("sm")]: {
       fontSize: 40,
@@ -38,6 +39,9 @@ const Home: NextPage = () => {
             Lawnmowers of Valentine
           </Title>
           <Text align="center">We mow Lawns.</Text>
+          <Link href="/pricing" passHref>
+            <Button component="a">Pricing</Button>
+          </Link>
         </main>
       </div>
     </>
