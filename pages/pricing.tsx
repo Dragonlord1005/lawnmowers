@@ -33,6 +33,7 @@ const price = [
 const Pricing: NextPage = () => {
   const { classes } = useStyles();
   const rows = price.map((price) => (
+    // eslint-disable-next-line react/jsx-key
     <tr>
       <td>{price.Area}</td>
       <td>{price.Price}</td>
