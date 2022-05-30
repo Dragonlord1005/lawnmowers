@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
-import { createStyles, Title, Text, Button } from "@mantine/core";
+import { createStyles, Title, Text, Button, Table } from "@mantine/core";
 
 const useStyles = createStyles((theme) => ({
   title: {
@@ -24,8 +24,20 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
+const price = [
+  { Area: "Front Lawn", Price: "10" },
+  { Area: "Back Lawn and Front Lawn", Price: "13" },
+  { Area: "Back Lawn, Front Lawn, and trimming", Price: "15" },
+]
+
 const Pricing: NextPage = () => {
   const { classes } = useStyles();
+  const rows = price.map((price) => (
+    <tr>
+      <td>{price.Area}</td>
+      <td>{price.Price}</td>
+    </tr>
+  ));
   return (
     <>
       <div className={styles.container}>
@@ -39,10 +51,17 @@ const Pricing: NextPage = () => {
           <Title align="center" className={classes.title}>
             Pricing
           </Title>
-          <Text>
-            It is $10 for the front lawn, $13 for both the front and back, and
-            $15 for the front, back, and trimming.
-          </Text>
+          <Table>
+            <thead>
+              <tr>
+                <th>Area</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows}
+            </tbody>
+          </Table>
         </main>
       </div>
     </>
