@@ -28,7 +28,7 @@ const price = [
   { Area: "Front Lawn", Price: "10" },
   { Area: "Back Lawn and Front Lawn", Price: "13" },
   { Area: "Back Lawn, Front Lawn, and trimming", Price: "15" },
-]
+];
 
 const Pricing: NextPage = () => {
   const { classes } = useStyles();
@@ -59,9 +59,7 @@ const Pricing: NextPage = () => {
                 <th>Price</th>
               </tr>
             </thead>
-            <tbody>
-              {rows}
-            </tbody>
+            <tbody>{rows}</tbody>
           </Table>
         </main>
       </div>
