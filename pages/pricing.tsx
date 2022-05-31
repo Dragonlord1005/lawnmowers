@@ -25,16 +25,15 @@ const useStyles = createStyles((theme) => ({
 }));
 
 const price = [
-  { Area: "Front Lawn", Price: "10" },
-  { Area: "Back Lawn and Front Lawn", Price: "13" },
-  { Area: "Back Lawn, Front Lawn, and trimming", Price: "15" },
+  { id: 1, Area: "Front Lawn", Price: "10" },
+  { id: 2, Area: "Back Lawn and Front Lawn", Price: "13" },
+  { id: 3, Area: "Back Lawn, Front Lawn, and trimming", Price: "15" },
 ];
 
 const Pricing: NextPage = () => {
   const { classes } = useStyles();
   const rows = price.map((price) => (
-    // eslint-disable-next-line react/jsx-key
-    <tr>
+    <tr key={price.id}>
       <td>{price.Area}</td>
       <td>{price.Price}</td>
     </tr>
