@@ -17,19 +17,18 @@ function MyApp(props: AppProps) {
   const { Component, pageProps }: AppPropsWithLayout = props;
   const getLayout = Component.getLayout ?? ((page) => page);
   return (
-      <MantineProvider
-        withGlobalStyles
-        withNormalizeCSS
-        theme={{
-          /** Put your mantine theme override here */
-          colorScheme: "light",
-        }}
-      >
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </MantineProvider>
-    
+    <MantineProvider
+      withGlobalStyles
+      withNormalizeCSS
+      theme={{
+        /** Put your mantine theme override here */
+        colorScheme: "light",
+      }}
+    >
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </MantineProvider>
   );
 }
 

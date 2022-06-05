@@ -4,14 +4,14 @@ import dynamic from "next/dynamic";
 const Navbar = dynamic(() => import("./Navbar/Navbar"));
 
 type Props = {
-    children?: ReactNode;
+  children?: ReactNode;
 };
 
 const links = [
-    { link: "/", label: "Home" },
-    { link: "/pricing", label: "Pricing" },
-    { link: "/contact", label: "Contact" },
-    { link: "/terms", label: "Terms" }
+  { link: "/", label: "Home" },
+  { link: "/pricing", label: "Pricing" },
+  { link: "/contact", label: "Contact" },
+  { link: "/terms", label: "Terms" },
 ];
 
 const Layout = ({ children }: Props) => (
@@ -20,6 +20,5 @@ const Layout = ({ children }: Props) => (
     {children}
   </div>
 );
-
 
 export default Layout;

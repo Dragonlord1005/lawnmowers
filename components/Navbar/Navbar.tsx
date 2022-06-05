@@ -11,7 +11,6 @@ import {
 import { useBooleanToggle } from "@mantine/hooks";
 import Link from "next/link";
 
-
 const HEADER_HEIGHT = 60;
 
 const useStyles = createStyles((theme) => ({
