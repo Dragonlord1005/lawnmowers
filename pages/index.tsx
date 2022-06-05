@@ -41,6 +41,10 @@ const Home: NextPage = () => {
           <Link href="/pricing" passHref>
             <Button component="a">Pricing</Button>
           </Link>
+          <br />
+          <Link href="/contact" passHref>
+            <Button component="a">Contact Us</Button>
+          </Link>
         </main>
       </div>
     </>
