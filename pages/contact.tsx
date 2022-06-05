@@ -22,7 +22,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-const Contact: nextPage = () => {
+const Contact: NextPage = () => {
   const { classes } = useStyles();
   return (
     <>
