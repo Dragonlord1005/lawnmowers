@@ -22,7 +22,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-const terms: NextPage = () => {
+const Terms: NextPage = () => {
   const { classes } = useStyles();
   return (
     <>
@@ -62,4 +62,4 @@ const terms: NextPage = () => {
   );
 };
 
-export default terms;
+export default Terms;
