@@ -1,29 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import Link from "next/link";
-import { createStyles, Title, Text, Button } from "@mantine/core";
+import { Text } from "@nextui-org/react";
 
-const useStyles = createStyles((theme) => ({
-  title: {
-    fontSize: 100,
-    fontWeight: 900,
-    lineHeight: 1.1,
 
-    [theme.fn.smallerThan("sm")]: {
-      fontSize: 40,
-      lineHeight: 1.2,
-    },
-
-    [theme.fn.smallerThan("xs")]: {
-      fontSize: 28,
-      lineHeight: 1.3,
-    },
-  },
-}));
 
 const Terms: NextPage = () => {
-  const { classes } = useStyles();
   return (
     <>
       <div className={styles.container}>
@@ -34,10 +16,10 @@ const Terms: NextPage = () => {
         </Head>
 
         <main className={styles.main}>
-          <Title align="center" className={classes.title}>
+          <Text h1>
             Terms of Service
-          </Title>
-          <Text>
+          </Text>
+          <Text h4>
             We ask that you read our terms of service before using our services.
           </Text>
           <Text>
@@ -48,7 +30,7 @@ const Terms: NextPage = () => {
             office, if you have to contact us please email us at
             lawnmowers.of.valentine@gmail.com
           </Text>
-          <Text align="center">
+          <Text>
             Under no circumstance will we ever work for free or for experience,
             payment is required upfront for our services. If you are not happy
             with the work we provided, we ask that you tell us everything that

@@ -12,33 +12,48 @@ const price = [
 ];
 
 const Pricing: NextPage = () => {
-  const rows = price.map((price) => (
-    <tr key={price.id}>
-      <td>{price.Area}</td>
-      <td>{price.Price}</td>
-    </tr>
-  ));
+  const columns = [
+    {
+      key: "area",
+      label: "Area",
+    },
+    {
+      key: "price",
+      label: "Price",
+    },
+  ];
+  const rows = [
+    {
+      key: "1",
+      area: "Front Lawn",
+    },
+  ]
   return (
     <>
-      <div className={styles.container}>
+      <div>
         <Head>
           <title>Pricing</title>
           <meta name="description" content="Our Pricing" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <main className={styles.main}>
-          <Text>
+        <main>
+          <Text h1>
             Pricing
           </Text>
           <Table>
-            <thead>
-              <tr>
-                <th>Area</th>
-                <th>Price</th>
-              </tr>
-            </thead>
-            <tbody>{rows}</tbody>
+            <Table.Header>
+              <Table.Column>Area</Table.Column>
+              <Table.Column>Price</Table.Column>
+            </Table.Header>
+            <Table.Body>
+              <Table.Row key="1">
+                <Table.Cell>Front Lawn</Table.Cell>
+              </Table.Row>
+              <Table.Row key="2">
+                <Table.Cell>10</Table.Cell>
+              </Table.Row>
+            </Table.Body>
           </Table>
         </main>
       </div>

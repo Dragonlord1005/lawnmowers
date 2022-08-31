@@ -1,29 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import Link from "next/link";
-import { createStyles, Title, Text, Button } from "@mantine/core";
+import NextLink from "next/link";
+import { Text, Link } from "@nextui-org/react";
 
-const useStyles = createStyles((theme) => ({
-  title: {
-    fontSize: 100,
-    fontWeight: 900,
-    lineHeight: 1.1,
-
-    [theme.fn.smallerThan("sm")]: {
-      fontSize: 40,
-      lineHeight: 1.2,
-    },
-
-    [theme.fn.smallerThan("xs")]: {
-      fontSize: 28,
-      lineHeight: 1.3,
-    },
-  },
-}));
 
 const Contact: NextPage = () => {
-  const { classes } = useStyles();
   return (
     <>
       <div className={styles.container}>
@@ -34,23 +16,23 @@ const Contact: NextPage = () => {
         </Head>
 
         <main className={styles.main}>
-          <Title align="center" className={classes.title}>
+          <Text>
             Contact Us
-          </Title>
-          <Text align="center">Where to contact us:</Text>
+          </Text>
+          <Text>Where to contact us:</Text>
           <Text>Email: lawnmowers.of.valentine@gmail.com</Text>
           <Text>Phone: 801-693-8079</Text>
           <Text>
             Befor reaching out we ask that you please review our terms of
             service
           </Text>
-          <Link href="/terms" passHref>
-            <Button component="a">Terms of Service</Button>
-          </Link>
+          <NextLink href="/terms" passHref>
+            <Link>Terms of Service</Link>
+          </NextLink>
           <br />
-          <Link href="/pricing" passHref>
-            <Button component="a">Pricing</Button>
-          </Link>
+          <NextLink href="/pricing">
+            <Link>Pricing</Link>
+          </NextLink>
         </main>
       </div>
     </>

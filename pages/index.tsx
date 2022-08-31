@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import NextLink from "next/link";
-import { Text, Button, Link } from "@nextui-org/react";
+import { Text, Link } from "@nextui-org/react";
 
 const Home: NextPage = () => {
   return (
@@ -19,12 +19,12 @@ const Home: NextPage = () => {
           <Text>We mow Lawns.</Text>
           <NextLink href="/pricing">
             <Link>
-              <Button>Pricing</Button>
+              Pricing
             </Link>
           </NextLink>
           <br />
           <NextLink href="/contact">
-            <Button>Contact Us</Button>
+            <Link>Contact Us</Link>
           </NextLink>
         </main>
       </div>
