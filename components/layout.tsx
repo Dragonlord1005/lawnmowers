@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import dynamic from "next/dynamic";
 
-const Navbar = dynamic(() => import("./Navbar/Navbar"));
+// const Navbar = dynamic(() => import("./Navbar/Navbar"));
 
 type Props = {
   children?: ReactNode;
@@ -16,7 +16,7 @@ const links = [
 
 const Layout = ({ children }: Props) => (
   <div>
-    <Navbar links={links} />
+    {/* <Navbar links={links} /> */}
     {children}
   </div>
 );
