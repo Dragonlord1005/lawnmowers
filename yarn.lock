@@ -204,15 +204,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/dates@npm:4.2.12":
-  version: 4.2.12
-  resolution: "@mantine/dates@npm:4.2.12"
+"@mantine/dates@npm:5.2.4":
+  version: 5.2.4
+  resolution: "@mantine/dates@npm:5.2.4"
+  dependencies:
+    "@mantine/utils": 5.2.4
   peerDependencies:
-    "@mantine/core": 4.2.12
-    "@mantine/hooks": 4.2.12
-    dayjs: ^1.10.5
+    "@mantine/core": 5.2.4
+    "@mantine/hooks": 5.2.4
+    dayjs: ">=1.0.0"
     react: ">=16.8.0"
-  checksum: 7257dd9a44aba907f8cf03951791549e50ac32f44cc0b528f0e90702c7a230f2975e48c395b8da4bc8c8912a2fcf176ce8331926578fcf73a2a92cdaba7b47b0
+  checksum: a74a364bfef4d184e3d96451897d539c84406eafd541807038ce4a699e328dcbe108533e2074e3a1c79954c590341944b4a009446f45945a88cecfc4f3a686d8
   languageName: node
   linkType: hard
 
@@ -309,6 +311,15 @@ __metadata:
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
   checksum: 8e99c7109e61ca1e3119cec39cac22a7b137964f61822e95c85c6c4e028852b42ace16ad82c94bcd1f3ba52106ae5e3c9b47bd33100eaa99a9e885fec1b1e58e
+  languageName: node
+  linkType: hard
+
+"@mantine/utils@npm:5.2.4":
+  version: 5.2.4
+  resolution: "@mantine/utils@npm:5.2.4"
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: c3c58b60255c140dc336615fc582960b88b2fc0e540da359bf8c6c4bdfbe43a07bf886a0da7ca6d9d11fbb457e86ed73c761765a850b0db7112c5ce6dec61d19
   languageName: node
   linkType: hard
 
@@ -2068,7 +2079,7 @@ __metadata:
   resolution: "lawnmowers@workspace:."
   dependencies:
     "@mantine/core": 4.2.12
-    "@mantine/dates": 4.2.12
+    "@mantine/dates": 5.2.4
     "@mantine/hooks": 4.2.12
     "@mantine/modals": 4.2.12
     "@mantine/next": 4.2.12
