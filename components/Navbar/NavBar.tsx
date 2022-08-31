@@ -6,6 +6,7 @@ export default function NavBar() {
     <Navbar>
       <Navbar.Content>
         <NextLink href="/"><Navbar.Link>Home</Navbar.Link></NextLink>
+        <NextLink href="/pricing"><Navbar.Link>Pricing</Navbar.Link></NextLink>
         <NextLink href="/contact"><Navbar.Link>Contact</Navbar.Link></NextLink>
         <NextLink href="terms"><Navbar.Link>Terms</Navbar.Link></NextLink>
       </Navbar.Content>

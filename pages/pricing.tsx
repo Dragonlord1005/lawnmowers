@@ -26,7 +26,18 @@ const Pricing: NextPage = () => {
     {
       key: "1",
       area: "Front Lawn",
+      price: "$10"
     },
+    {
+      key: "2",
+      area: "Back Lawn and Front Lawn",
+      price: "$13"
+    },
+    {
+      key: "3",
+      area: "Back Lawn and Front Lawn and Trimming",
+      price: "$15"
+    }
   ]
   return (
     <>
@@ -42,17 +53,17 @@ const Pricing: NextPage = () => {
             Pricing
           </Text>
           <Table>
-            <Table.Header>
-              <Table.Column>Area</Table.Column>
-              <Table.Column>Price</Table.Column>
+            <Table.Header columns={columns}>
+              {(column) => (
+              <Table.Column key={column.key}>{column.label}</Table.Column>
+              )}
             </Table.Header>
-            <Table.Body>
-              <Table.Row key="1">
-                <Table.Cell>Front Lawn</Table.Cell>
-              </Table.Row>
-              <Table.Row key="2">
-                <Table.Cell>10</Table.Cell>
-              </Table.Row>
+            <Table.Body items={rows}>
+              {(item) => (
+          <Table.Row key={item.key}>
+            {(columnKey) => <Table.Cell>{item[columnKey]}</Table.Cell>}
+          </Table.Row>
+        )}
             </Table.Body>
           </Table>
         </main>
