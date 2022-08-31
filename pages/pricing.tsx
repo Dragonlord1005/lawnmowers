@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
-import { Text, Table }
+import { Text, Table } from "@nextui-org/react";
 
 const price = [
   { id: 1, Area: "Front Lawn", Price: "10" },

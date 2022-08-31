@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import Link from "next/link";
-import { Text, Button } from "@nextui-org/react";
+import NextLink from "next/link";
+import { Text, Button, Link } from "@nextui-org/react";
 
 const Home: NextPage = () => {
   return (
@@ -15,17 +15,17 @@ const Home: NextPage = () => {
         </Head>
 
         <main className={styles.main}>
-          <Text>
-            Lawnmowers of Valentine
-          </Text>
+          <Text>Lawnmowers of Valentine</Text>
           <Text>We mow Lawns.</Text>
-          <NextLink href="/pricing" passHref>
-            <Button>Pricing</Button>
+          <NextLink href="/pricing">
+            <Link>
+              <Button>Pricing</Button>
+            </Link>
           </NextLink>
           <br />
-          <Link href="/contact" passHref>
+          <NextLink href="/contact">
             <Button>Contact Us</Button>
-          </Link>
+          </NextLink>
         </main>
       </div>
     </>
