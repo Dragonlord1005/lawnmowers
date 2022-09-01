@@ -31,8 +31,8 @@ export default function NavBar() {
       </Navbar.Content>
       <Navbar.Collapse showIn="xs">
       {links.map((item, index) => (
-        <Navbar.CollapseItem key={item}>
-          <NextLink href={links}
+        <Navbar.CollapseItem key={item.name}>
+          <NextLink href={links.href as keyof typeof String}
             <Link>{links.name}</Link>
         </Navbar.CollapseItem>
       ))};
