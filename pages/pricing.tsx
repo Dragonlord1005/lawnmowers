@@ -1,8 +1,6 @@
 // Next.js app using mantine and is about pricing
 import type { NextPage } from "next";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import Link from "next/link";
 import { Text, Table } from "@nextui-org/react";
 
 const Pricing: NextPage = () => {
