@@ -5,12 +5,6 @@ import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import { Text, Table } from "@nextui-org/react";
 
-const price = [
-  { id: 1, Area: "Front Lawn", Price: "10" },
-  { id: 2, Area: "Back Lawn and Front Lawn", Price: "13" },
-  { id: 3, Area: "Back Lawn, Front Lawn, and trimming", Price: "15" },
-];
-
 const Pricing: NextPage = () => {
   const columns = [
     {
@@ -26,19 +20,19 @@ const Pricing: NextPage = () => {
     {
       key: "1",
       area: "Front Lawn",
-      price: "$10"
+      price: "$10",
     },
     {
       key: "2",
       area: "Back Lawn and Front Lawn",
-      price: "$13"
+      price: "$13",
     },
     {
       key: "3",
       area: "Back Lawn and Front Lawn and Trimming",
-      price: "$15"
-    }
-  ]
+      price: "$15",
+    },
+  ];
   return (
     <>
       <div>
@@ -49,21 +43,19 @@ const Pricing: NextPage = () => {
         </Head>
 
         <main>
-          <Text h1>
-            Pricing
-          </Text>
+          <Text h1>Pricing</Text>
           <Table>
             <Table.Header columns={columns}>
               {(column) => (
-              <Table.Column key={column.key}>{column.label}</Table.Column>
+                <Table.Column key={column.key}>{column.label}</Table.Column>
               )}
             </Table.Header>
             <Table.Body items={rows}>
               {(item) => (
-          <Table.Row key={item.key}>
-            {(columnKey) => <Table.Cell>{item[columnKey]}</Table.Cell>}
-          </Table.Row>
-        )}
+                <Table.Row key={item.key}>
+                  {(columnKey) => <Table.Cell>{item[columnKey as keyof typeof item]}</Table.Cell>}
+                </Table.Row>
+              )}
             </Table.Body>
           </Table>
         </main>
