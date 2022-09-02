@@ -3,7 +3,7 @@ import type { ReactElement, ReactNode } from "react";
 import type { AppProps } from "next/app";
 import type { NextPage } from "next";
 import Layout from "../components/layout";
-import { MantineProvider } from "@mantine/core";
+import { NextUIProvider } from '@nextui-org/react';
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -17,18 +17,12 @@ function MyApp(props: AppProps) {
   const { Component, pageProps }: AppPropsWithLayout = props;
   const getLayout = Component.getLayout ?? ((page) => page);
   return (
-    <MantineProvider
-      withGlobalStyles
-      withNormalizeCSS
-      theme={{
-        /** Put your mantine theme override here */
-        colorScheme: "light",
-      }}
-    >
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </MantineProvider>
+
+      <NextUIProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </NextUIProvider>
   );
 }
 

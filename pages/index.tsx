@@ -1,29 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import Link from "next/link";
-import { createStyles, Title, Text, Button } from "@mantine/core";
-
-const useStyles = createStyles((theme) => ({
-  title: {
-    fontSize: 100,
-    fontWeight: 900,
-    lineHeight: 1.1,
-
-    [theme.fn.smallerThan("sm")]: {
-      fontSize: 40,
-      lineHeight: 1.2,
-    },
-
-    [theme.fn.smallerThan("xs")]: {
-      fontSize: 28,
-      lineHeight: 1.3,
-    },
-  },
-}));
+import NextLink from "next/link";
+import { Text, Link } from "@nextui-org/react";
 
 const Home: NextPage = () => {
-  const { classes } = useStyles();
   return (
     <>
       <div className={styles.container}>
@@ -34,17 +15,17 @@ const Home: NextPage = () => {
         </Head>
 
         <main className={styles.main}>
-          <Title align="center" className={classes.title}>
-            Lawnmowers of Valentine
-          </Title>
-          <Text align="center">We mow Lawns.</Text>
-          <Link href="/pricing" passHref>
-            <Button component="a">Pricing</Button>
-          </Link>
+          <Text>Lawnmowers of Valentine</Text>
+          <Text>We mow Lawns.</Text>
+          <NextLink href="/pricing">
+            <Link>
+              Pricing
+            </Link>
+          </NextLink>
           <br />
-          <Link href="/contact" passHref>
-            <Button component="a">Contact Us</Button>
-          </Link>
+          <NextLink href="/contact">
+            <Link>Contact Us</Link>
+          </NextLink>
         </main>
       </div>
     </>
