@@ -15,6 +15,8 @@ FROM mcr.microsoft.com/vscode/devcontainers/typescript-node:0-${VARIANT}
 
 USER node
 
+CMD ["/bin/bash"]
+
 RUN curl -fsSL https://get.pnpm.io/install.sh | sh -
 
 RUN mkdir -p ~/.local/share/fonts
