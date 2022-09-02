@@ -16,6 +16,10 @@ export default function LightDark() {
         onChange={(e) => setTheme(e.target.checked ? "dark" : "light")}
         iconOn={<i className="bx bxs-moon"></i>}
         iconOff={<i className="bx bxs-sun"></i>}
+        css={{
+          pr: "40px",
+          pt: "6px"
+        }}
       />
     </div>
   );
