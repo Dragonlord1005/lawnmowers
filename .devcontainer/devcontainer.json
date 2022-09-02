@@ -23,7 +23,13 @@
 				"trunk.io",
 				"formulahendry.auto-rename-tag",
 				"dracula-theme.theme-dracula",
-				"EditorConfig.EditorConfig"
+				"EditorConfig.EditorConfig",
+				"miguelsolorio.fluent-icons",
+				"lextudio.restructuredtext",
+				"vscode-icons-team.vscode-icons",
+				"quicktype.quicktype",
+				"JSONHero.jsonhero-vscode",
+				"aaron-bond.better-comments"
 			]
 		}
 	},
