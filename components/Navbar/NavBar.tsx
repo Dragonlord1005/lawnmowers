@@ -22,7 +22,7 @@ export default function NavBar() {
     },
   ];
   return (
-    <Navbar>
+    <Navbar isBordered>
       <Navbar.Toggle showIn="xs" autoFocus />
       <Navbar.Content hideIn="xs">
         <NextLink href="/">
