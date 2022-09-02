@@ -1,5 +1,6 @@
 import { Navbar, Link } from "@nextui-org/react";
-import NextLink from "next/link"
+import NextLink from "next/link";
+import LightDark from "../LightDark/LightDark";
 
 export default function NavBar() {
   const links = [
@@ -13,21 +14,29 @@ export default function NavBar() {
     },
     {
       name: "Contact",
-      href: "/contact"
+      href: "/contact",
     },
     {
       name: "Terms",
-      href: "/terms"
-    }
-  ]
+      href: "/terms",
+    },
+  ];
   return (
-    <Navbar>
+    <Navbar isBordered>
       <Navbar.Toggle showIn="xs" autoFocus />
       <Navbar.Content hideIn="xs">
-        <NextLink href="/"><Navbar.Link>Home</Navbar.Link></NextLink>
-        <NextLink href="/pricing"><Navbar.Link>Pricing</Navbar.Link></NextLink>
-        <NextLink href="/contact"><Navbar.Link>Contact</Navbar.Link></NextLink>
-        <NextLink href="/terms"><Navbar.Link>Terms</Navbar.Link></NextLink>
+        <NextLink href="/">
+          <Navbar.Link>Home</Navbar.Link>
+        </NextLink>
+        <NextLink href="/pricing">
+          <Navbar.Link>Pricing</Navbar.Link>
+        </NextLink>
+        <NextLink href="/contact">
+          <Navbar.Link>Contact</Navbar.Link>
+        </NextLink>
+        <NextLink href="/terms">
+          <Navbar.Link>Terms</Navbar.Link>
+        </NextLink>
       </Navbar.Content>
       <Navbar.Collapse>
         {links.map((link) => (
@@ -35,12 +44,11 @@ export default function NavBar() {
             <Link>{link.name}</Link>
           </NextLink>
         ))}
-
       </Navbar.Collapse>
       <Navbar.Brand>
+        <LightDark />
         Lawnmowers
       </Navbar.Brand>
-
     </Navbar>
-  )
+  );
 }
