@@ -13,12 +13,13 @@ export default function LightDark() {
       <Switch
         checked={isDark}
         size="xs"
+        shadow color="primary"
         onChange={(e) => setTheme(e.target.checked ? "dark" : "light")}
         iconOn={<i className="bx bxs-moon"></i>}
         iconOff={<i className="bx bxs-sun"></i>}
         css={{
           pr: "40px",
-          pt: "6px"
+          pt: "6px",
         }}
       />
     </div>
