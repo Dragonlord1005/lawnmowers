@@ -1,5 +1,6 @@
 import { Navbar, Link } from "@nextui-org/react";
 import NextLink from "next/link"
+import LightDark from "../LightDark/LightDark";
 
 export default function NavBar() {
   const links = [
@@ -38,6 +39,7 @@ export default function NavBar() {
 
       </Navbar.Collapse>
       <Navbar.Brand>
+        <LightDark />
         Lawnmowers
       </Navbar.Brand>
 

@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import NavBar from "./Navbar/NavBar"
-import LightDark from "./LightDark/LightDark"
+import NavBar from "./Navbar/NavBar";
+import LightDark from "./LightDark/LightDark";
 
 type Props = {
   children?: ReactNode;
@@ -8,7 +8,7 @@ type Props = {
 
 const Layout = ({ children }: Props) => (
   <div>
-    <NavBar/>
+    <NavBar />
     {children}
     {/* <LightDark /> */}
   </div>

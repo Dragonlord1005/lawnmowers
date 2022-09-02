@@ -1,4 +1,3 @@
-// Next.js app using mantine and is about pricing
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Text, Table } from "@nextui-org/react";
@@ -51,7 +50,11 @@ const Pricing: NextPage = () => {
             <Table.Body items={rows}>
               {(item) => (
                 <Table.Row key={item.key}>
-                  {(columnKey) => <Table.Cell>{item[columnKey as keyof typeof item]}</Table.Cell>}
+                  {(columnKey) => (
+                    <Table.Cell>
+                      {item[columnKey as keyof typeof item]}
+                    </Table.Cell>
+                  )}
                 </Table.Row>
               )}
             </Table.Body>
