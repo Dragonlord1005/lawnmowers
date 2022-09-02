@@ -17,5 +17,7 @@ RUN apt update && apt install curl
 
 RUN su node -c "curl -fsSL https://get.pnpm.io/install.sh | sh -"
 
+run su node -c "pnpm fetch"
+
 RUN su node -c "mkdir -p ~/.local/share/fonts"
 RUN su node -c "cd ~/.local/share/fonts && curl -fLo 'Meslo LG M Regular Nerd Font Complete.ttf' https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Meslo/M/Regular/complete/Meslo%20LG%20M%20Regular%20Nerd%20Font%20Complete.ttf"
