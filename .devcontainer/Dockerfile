@@ -17,6 +17,8 @@ RUN su node -c "curl -fsSL https://get.pnpm.io/install.sh | sh -"
 
 # RUN su node -c "source /home/node/.bashrc"
 
+RUN su node -c "ls"
+
 run su node -c "/home/node/.local/share/pnpm/pnpm fetch"
 
 RUN su node -c "mkdir -p ~/.local/share/fonts"
