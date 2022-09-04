@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import NextLink from "next/link";
-import { Text, Link } from "@nextui-org/react";
+import { Text, Link, Spacer } from "@nextui-org/react";
 
 const Home: NextPage = () => {
   return (
@@ -15,14 +15,14 @@ const Home: NextPage = () => {
         </Head>
 
         <main className={styles.main}>
-          <Text>Lawnmowers of Valentine</Text>
-          <Text>We mow Lawns.</Text>
+          <Text h1>Lawnmowers of Valentine</Text>
+          <Text h2>We mow Lawns.</Text>
           <NextLink href="/pricing">
             <Link>
               Pricing
             </Link>
           </NextLink>
-          <br />
+          <Spacer />
           <NextLink href="/contact">
             <Link>Contact Us</Link>
           </NextLink>

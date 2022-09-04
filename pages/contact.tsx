@@ -16,13 +16,13 @@ const Contact: NextPage = () => {
         </Head>
 
         <main className={styles.main}>
-          <Text>
+          <Text h1>
             Contact Us
           </Text>
-          <Text>Where to contact us:</Text>
-          <Text>Email: lawnmowers.of.valentine@gmail.com</Text>
-          <Text>Phone: 801-693-8079</Text>
-          <Text>
+          <Text h2>Where to contact us:</Text>
+          <Text h3>Email: lawnmowers.of.valentine@gmail.com</Text>
+          <Text h3>Phone: 801-693-8079</Text>
+          <Text h4>
             Befor reaching out we ask that you please review our terms of
             service
           </Text>
