@@ -13,7 +13,6 @@ FROM mcr.microsoft.com/vscode/devcontainers/typescript-node:0-${VARIANT}
 # [Optional] Uncomment if you want to install more global node packages
 # RUN su node -c "npm install -g <your-package-list -here>"
 
-RUN su node -c "curl -fsSL https://get.pnpm.io/install.sh | sh -"
-
-RUN su node -c "mkdir -p ~/.local/share/fonts"
-RUN su node -c "cd ~/.local/share/fonts && curl -fLo 'Meslo LG M Regular Nerd Font Complete.ttf' https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Meslo/M/Regular/complete/Meslo%20LG%20M%20Regular%20Nerd%20Font%20Complete.ttf"
+RUN su node -c "curl -fsSL https://get.pnpm.io/install.sh | sh -" \
+    && su node -c "mkdir -p ~/.local/share/fonts" \
+    && su node -c "cd ~/.local/share/fonts && curl -fLo 'Meslo LG M Regular Nerd Font Complete.ttf' https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Meslo/M/Regular/complete/Meslo%20LG%20M%20Regular%20Nerd%20Font%20Complete.ttf"
