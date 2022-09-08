@@ -1,3 +1,6 @@
 {
-    "terminal.integrated.fontFamily": "MesloLGM NF"
+    "terminal.integrated.fontFamily": "MesloLGM NF",
+    "terminal.integrated.automationProfile.linux": {
+        "icon": "terminal-ubuntu"
+    },
 }
