@@ -18,9 +18,7 @@ const Home: NextPage = () => {
           <Text h1>Lawnmowers of Valentine</Text>
           <Text h2>We mow Lawns.</Text>
           <NextLink href="/pricing">
-            <Link>
-              Pricing
-            </Link>
+            <Link>Pricing</Link>
           </NextLink>
           <Spacer />
           <NextLink href="/contact">
