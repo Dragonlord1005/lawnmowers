@@ -1,15 +1,17 @@
 import { useTheme as useNextTheme } from "next-themes";
 import { Switch, useTheme } from "@nextui-org/react";
+import Script from 'next/script'
 
 export default function LightDark() {
   const { setTheme } = useNextTheme();
   const { isDark, type } = useTheme();
   return (
     <div>
-      <link
+      {/* <link
         href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
         rel="stylesheet"
-      ></link>
+      ></link> */}
+      <Script src="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" />
       <Switch
         checked={isDark}
         size="xs"
