@@ -41,7 +41,7 @@ const Pricing: NextPage = () => {
 
         <main>
           <Text h1>Pricing</Text>
-          <Table>
+          <Table animated={false} bordered>
             <Table.Header columns={columns}>
               {(column) => (
                 <Table.Column key={column.key}>{column.label}</Table.Column>
