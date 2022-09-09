@@ -3,8 +3,6 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { Text } from "@nextui-org/react";
 
-
-
 const Terms: NextPage = () => {
   return (
     <>
