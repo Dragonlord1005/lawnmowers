@@ -1,35 +1,14 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Text, Table } from "@nextui-org/react";
+import { Text } from "@nextui-org/react";
+import dynamic from "next/dynamic";
+// import Price from "../components/pricing/pricing";
+
+const Price = dynamic(() => import('../components/pricing/pricing'), {
+  suspense: true,
+})
 
 const Pricing: NextPage = () => {
-  const columns = [
-    {
-      key: "area",
-      label: "Area",
-    },
-    {
-      key: "price",
-      label: "Price",
-    },
-  ];
-  const rows = [
-    {
-      key: "1",
-      area: "Front Lawn",
-      price: "$10",
-    },
-    {
-      key: "2",
-      area: "Back Lawn and Front Lawn",
-      price: "$13",
-    },
-    {
-      key: "3",
-      area: "Back Lawn and Front Lawn and Trimming",
-      price: "$15",
-    },
-  ];
   return (
     <>
       <div>
@@ -41,24 +20,7 @@ const Pricing: NextPage = () => {
 
         <main>
           <Text h1>Pricing</Text>
-          <Table animated={false} bordered>
-            <Table.Header columns={columns}>
-              {(column) => (
-                <Table.Column key={column.key}>{column.label}</Table.Column>
-              )}
-            </Table.Header>
-            <Table.Body items={rows}>
-              {(item) => (
-                <Table.Row key={item.key}>
-                  {(columnKey) => (
-                    <Table.Cell>
-                      {item[columnKey as keyof typeof item]}
-                    </Table.Cell>
-                  )}
-                </Table.Row>
-              )}
-            </Table.Body>
-          </Table>
+          <Price />
         </main>
       </div>
     </>
