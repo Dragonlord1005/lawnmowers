@@ -38,13 +38,13 @@ export default function NavBar() {
           <Navbar.Link>Terms</Navbar.Link>
         </NextLink>
       </Navbar.Content>
-      <Navbar.Collapse>
+      {/* <Navbar.Collapse>
         {links.map((link) => (
           <NextLink href={link.href} key={link.name}>
             <Link>{link.name}</Link>
           </NextLink>
         ))}
-      </Navbar.Collapse>
+      </Navbar.Collapse> */}
       <Navbar.Brand>
         <LightDark />
         Lawnmowers
