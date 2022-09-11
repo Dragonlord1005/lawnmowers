@@ -23,7 +23,7 @@ export default function NavBar() {
   ];
   return (
     <Navbar isBordered variant={"floating"}>
-      <Navbar.Toggle showIn="xs" autoFocus />
+      {/* <Navbar.Toggle showIn="xs" autoFocus /> */}
       <Navbar.Content hideIn="xs">
         <NextLink href="/">
           <Navbar.Link>Home</Navbar.Link>
