@@ -1,10 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Text } from "@nextui-org/react";
+import { Text, Loading } from "@nextui-org/react";
 import dynamic from "next/dynamic";
 // import Price from "../components/pricing/pricing";
+import { Suspense } from "react";
 
-const Price = dynamic(() => import('../components/pricing/pricing'), {
+const Price = dynamic(() => import('../components/price/price'), {
   suspense: true,
 })
 
@@ -20,7 +21,9 @@ const Pricing: NextPage = () => {
 
         <main>
           <Text h1>Pricing</Text>
-          <Price />
+          <Suspense fallback={<Loading />}>
+            <Price />
+          </Suspense>
         </main>
       </div>
     </>
