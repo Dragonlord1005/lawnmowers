@@ -24,7 +24,7 @@ type AppPropsWithLayout = AppProps & {
 
 function MyApp(props: AppProps) {
   const { Component, pageProps }: AppPropsWithLayout = props;
-  const getLayout = Component.getLayout ?? ((page) => page);
+  // const getLayout = Component.getLayout ?? ((page) => page);
   return (
     <NextThemesProvider
       defaultTheme="system"
