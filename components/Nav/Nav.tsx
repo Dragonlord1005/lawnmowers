@@ -2,8 +2,7 @@ import { Navbar, Link } from "@nextui-org/react";
 import NextLink from "next/link";
 import LightDark from "../LightDark/LightDark";
 
-export default function NavBar() {
-  
+export default function Nav() {
   return (
     <Navbar isBordered variant={"floating"}>
       <Navbar.Toggle />
@@ -36,16 +35,12 @@ export default function NavBar() {
           <NextLink href="/contact">
             <Link>Conact</Link>
           </NextLink>
-
         </Navbar.CollapseItem>
         <Navbar.CollapseItem>
           <NextLink href="/terms">
             <Link>Terms</Link>
           </NextLink>
-
         </Navbar.CollapseItem>
-
-
       </Navbar.Collapse>
       <Navbar.Brand>
         <LightDark />
