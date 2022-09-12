@@ -5,7 +5,7 @@ import LightDark from "../LightDark/LightDark";
 export default function Nav() {
   return (
     <Navbar isBordered variant={"floating"}>
-      <Navbar.Toggle />
+      <Navbar.Toggle showIn="xs" />
       <Navbar.Content hideIn="xs">
         <NextLink href="/" prefetch={false}>
           <Navbar.Link>Home</Navbar.Link>
@@ -27,17 +27,17 @@ export default function Nav() {
           </NextLink>
         </Navbar.CollapseItem>
         <Navbar.CollapseItem>
-          <NextLink href="/pricing">
+          <NextLink href="/pricing" prefetch={false}>
             <Link>Pricing</Link>
           </NextLink>
         </Navbar.CollapseItem>
         <Navbar.CollapseItem>
-          <NextLink href="/contact">
+          <NextLink href="/contact" prefetch={false}>
             <Link>Conact</Link>
           </NextLink>
         </Navbar.CollapseItem>
         <Navbar.CollapseItem>
-          <NextLink href="/terms">
+          <NextLink href="/terms" prefetch={false}>
             <Link>Terms</Link>
           </NextLink>
         </Navbar.CollapseItem>
