@@ -2,7 +2,6 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { Text, Loading, Container } from "@nextui-org/react";
 import dynamic from "next/dynamic";
-// import Price from "../components/pricing/pricing";
 import { Suspense } from "react";
 
 const Price = dynamic(() => import("../components/price/price"), {
