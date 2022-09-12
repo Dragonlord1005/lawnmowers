@@ -23,24 +23,24 @@ export default function NavBar() {
   ];
   return (
     <Navbar isBordered variant={"floating"}>
-      <Navbar.Toggle showIn="xs" autoFocus />
+      <Navbar.Toggle showIn="xs" />
       <Navbar.Content hideIn="xs">
-        <NextLink href="/">
+        <NextLink href="/" prefetch={false}>
           <Navbar.Link>Home</Navbar.Link>
         </NextLink>
-        <NextLink href="/pricing">
+        <NextLink href="/pricing" prefetch={false}>
           <Navbar.Link>Pricing</Navbar.Link>
         </NextLink>
-        <NextLink href="/contact">
+        <NextLink href="/contact" prefetch={false}>
           <Navbar.Link>Contact</Navbar.Link>
         </NextLink>
-        <NextLink href="/terms">
+        <NextLink href="/terms" prefetch={false}>
           <Navbar.Link>Terms</Navbar.Link>
         </NextLink>
       </Navbar.Content>
-      <Navbar.Collapse>
+      <Navbar.Collapse disableAnimation>
         {links.map((link) => (
-          <NextLink href={link.href} key={link.name}>
+          <NextLink href={link.href} key={link.name} prefetch={false}>
             <Link>{link.name}</Link>
           </NextLink>
         ))}
