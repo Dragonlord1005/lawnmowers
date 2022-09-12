@@ -3,7 +3,6 @@ import Head from "next/head";
 import NextLink from "next/link";
 import { Text, Link, Container } from "@nextui-org/react";
 
-
 const Contact: NextPage = () => {
   return (
     <>
@@ -14,10 +13,13 @@ const Contact: NextPage = () => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <Container alignItems="center" display="flex" justify="center" direction="column">
-          <Text h1>
-            Contact Us
-          </Text>
+        <Container
+          alignItems="center"
+          display="flex"
+          justify="center"
+          direction="column"
+        >
+          <Text h1>Contact Us</Text>
           <Text h2>Where to contact us:</Text>
           <Text h3>Email: lawnmowers.of.valentine@gmail.com</Text>
           <Text h3>Phone: 801-693-8079</Text>

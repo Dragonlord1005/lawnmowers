@@ -12,10 +12,13 @@ const Terms: NextPage = () => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <Container alignItems="center" display="flex" justify="center" direction="column">
-          <Text h1>
-            Terms of Service
-          </Text>
+        <Container
+          alignItems="center"
+          display="flex"
+          justify="center"
+          direction="column"
+        >
+          <Text h1>Terms of Service</Text>
           <Text h4>
             We ask that you read our terms of service before using our services.
           </Text>

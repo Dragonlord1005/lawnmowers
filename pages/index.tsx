@@ -13,13 +13,16 @@ const Home: NextPage = () => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <Container alignItems="center" display="flex" justify="center" direction="column">
+        <Container
+          alignItems="center"
+          display="flex"
+          justify="center"
+          direction="column"
+        >
           <Text h1>Lawnmowers of Valentine</Text>
           <Text h2>We mow Lawns.</Text>
           <NextLink href="/pricing" prefetch={false}>
-            <Link>
-              Pricing
-            </Link>
+            <Link>Pricing</Link>
           </NextLink>
           <Spacer />
           <NextLink href="/contact" prefetch={false}>
