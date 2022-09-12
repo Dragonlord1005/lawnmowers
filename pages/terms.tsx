@@ -1,19 +1,19 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import { Text } from "@nextui-org/react";
+import { Container, Text } from "@nextui-org/react";
 
 const Terms: NextPage = () => {
   return (
     <>
-      <div className={styles.container}>
+      <div>
         <Head>
           <title>Terms of Service</title>
           <meta name="description" content="Terms of Service" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <main className={styles.main}>
+        <Container alignItems="center" display="flex" justify="center" direction="column">
           <Text h1>
             Terms of Service
           </Text>
@@ -36,7 +36,7 @@ const Terms: NextPage = () => {
             not do fixup jobs, if you have any issues tell us then, and we will
             do our best to fix it.
           </Text>
-        </main>
+        </Container>
       </div>
     </>
   );

@@ -1,21 +1,20 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import NextLink from "next/link";
-import { Text, Link } from "@nextui-org/react";
+import { Text, Link, Container } from "@nextui-org/react";
 
 
 const Contact: NextPage = () => {
   return (
     <>
-      <div className={styles.container}>
+      <div>
         <Head>
           <title>Contact Us</title>
           <meta name="description" content="Where to contact us" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <main className={styles.main}>
+        <Container alignItems="center" display="flex" justify="center" direction="column">
           <Text h1>
             Contact Us
           </Text>
@@ -26,14 +25,14 @@ const Contact: NextPage = () => {
             Befor reaching out we ask that you please review our terms of
             service
           </Text>
-          <NextLink href="/terms" passHref>
+          <NextLink href="/terms">
             <Link>Terms of Service</Link>
           </NextLink>
           <br />
           <NextLink href="/pricing">
             <Link>Pricing</Link>
           </NextLink>
-        </main>
+        </Container>
       </div>
     </>
   );
