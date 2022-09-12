@@ -12,7 +12,7 @@
     {
       "matchPackagePatterns": ["@types"],
       "matchUpdateTypes": ["patch", "minor"],
-      "groupName": "@types (non-major)"
+      "groupName": "types (non-major)"
     },
   ]
 }
