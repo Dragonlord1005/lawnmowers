@@ -14,5 +14,11 @@
       "matchUpdateTypes": ["patch", "minor"],
       "groupName": "types (non-major)"
     },
+    {
+      "matchPackagePatterns": ["eslint"],
+      "groupName": "eslint",
+      "automerge": true,
+      "automergeType": "branch"
+    },
   ]
 }
