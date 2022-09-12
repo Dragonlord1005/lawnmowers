@@ -11,8 +11,8 @@
     },
     {
       "matchPackagePatterns": ["@types"],
-      "mathUpdateTypes": ["patch", "minor"],
-      "GroupName": "@types (non-major)"
+      "matchUpdateTypes": ["patch", "minor"],
+      "groupName": "@types (non-major)"
     },
   ]
 }
