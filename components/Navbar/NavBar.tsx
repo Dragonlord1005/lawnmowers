@@ -3,27 +3,10 @@ import NextLink from "next/link";
 import LightDark from "../LightDark/LightDark";
 
 export default function NavBar() {
-  const links = [
-    {
-      name: "Home",
-      href: "/",
-    },
-    {
-      name: "Pricing",
-      href: "/pricing",
-    },
-    {
-      name: "Contact",
-      href: "/contact",
-    },
-    {
-      name: "Terms",
-      href: "/terms",
-    },
-  ];
+  
   return (
     <Navbar isBordered variant={"floating"}>
-      <Navbar.Toggle showIn="xs" />
+      <Navbar.Toggle />
       <Navbar.Content hideIn="xs">
         <NextLink href="/" prefetch={false}>
           <Navbar.Link>Home</Navbar.Link>
@@ -39,11 +22,30 @@ export default function NavBar() {
         </NextLink>
       </Navbar.Content>
       <Navbar.Collapse disableAnimation>
-        {links.map((link) => (
-          <NextLink href={link.href} key={link.name} prefetch={false}>
-            <Link>{link.name}</Link>
+        <Navbar.CollapseItem>
+          <NextLink href="/" prefetch={false}>
+            <Link>Home</Link>
           </NextLink>
-        ))}
+        </Navbar.CollapseItem>
+        <Navbar.CollapseItem>
+          <NextLink href="/pricing">
+            <Link>Pricing</Link>
+          </NextLink>
+        </Navbar.CollapseItem>
+        <Navbar.CollapseItem>
+          <NextLink href="/contact">
+            <Link>Conact</Link>
+          </NextLink>
+
+        </Navbar.CollapseItem>
+        <Navbar.CollapseItem>
+          <NextLink href="/terms">
+            <Link>Terms</Link>
+          </NextLink>
+
+        </Navbar.CollapseItem>
+
+
       </Navbar.Collapse>
       <Navbar.Brand>
         <LightDark />
