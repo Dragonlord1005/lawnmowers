@@ -1,9 +1,9 @@
 // import "../styles/globals.css";
-import type { ReactElement, ReactNode } from "react";
+import { ReactElement, ReactNode, Suspense } from "react";
 import type { AppProps } from "next/app";
 import type { NextPage } from "next";
 import Layout from "../components/layout";
-import { NextUIProvider, createTheme } from "@nextui-org/react";
+import { NextUIProvider, createTheme, Loading } from "@nextui-org/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 
 const lightTheme = createTheme({
@@ -36,7 +36,9 @@ function MyApp(props: AppProps) {
     >
       <NextUIProvider>
         <Layout>
-          <Component {...pageProps} />
+          <Suspense fallback={<Loading />}>
+            <Component {...pageProps} />
+          </Suspense>
         </Layout>
       </NextUIProvider>
     </NextThemesProvider>
