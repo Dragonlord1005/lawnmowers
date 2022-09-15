@@ -25,10 +25,8 @@
 				"dracula-theme.theme-dracula",
 				"EditorConfig.EditorConfig",
 				"miguelsolorio.fluent-icons",
-				"lextudio.restructuredtext",
 				"vscode-icons-team.vscode-icons",
 				"quicktype.quicktype",
-				"JSONHero.jsonhero-vscode",
 				"aaron-bond.better-comments"
 			]
 		}
