@@ -27,7 +27,8 @@
 				"miguelsolorio.fluent-icons",
 				"vscode-icons-team.vscode-icons",
 				"quicktype.quicktype",
-				"aaron-bond.better-comments"
+				"aaron-bond.better-comments",
+				"GitHub.copilot"
 			]
 		}
 	},
