@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: lawnmowers.vercel.app
-
-# Sitemaps
-Sitemap: lawnmowers.vercel.app/sitemap.xml
