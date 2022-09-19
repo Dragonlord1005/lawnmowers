@@ -28,7 +28,8 @@
 				"vscode-icons-team.vscode-icons",
 				"quicktype.quicktype",
 				"aaron-bond.better-comments",
-				"GitHub.copilot"
+				"GitHub.copilot",
+				"WakaTime.vscode-wakatime"
 			]
 		}
 	},
