@@ -6,7 +6,7 @@ import { Suspense } from "react";
 
 const Price = dynamic(() => import("../components/price/price"), {
   suspense: true,
-  ssr: false,
+  ssr: true,
 });
 
 const Pricing: NextPage = () => {
