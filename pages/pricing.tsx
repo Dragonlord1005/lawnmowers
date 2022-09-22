@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import { Suspense } from "react";
 
 const Price = dynamic(() => import("../components/price/price"), {
-  // suspense: true,
+  suspense: true,
   ssr: true,
 });
 
@@ -28,9 +28,9 @@ const Pricing: NextPage = () => {
           >
             Pricing
           </Text>
-          {/* <Suspense fallback={<Loading />}> */}
+          <Suspense fallback={<Loading />}>
             <Price />
-          {/* </Suspense> */}
+          </Suspense>
         </Container>
       </div>
     </>
