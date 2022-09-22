@@ -7,37 +7,37 @@ export default function Nav() {
     <Navbar isBordered variant={"floating"}>
       <Navbar.Toggle showIn="xs" />
       <Navbar.Content hideIn="xs">
-        <NextLink href="/" prefetch={false}>
+        <NextLink href="/" prefetch={false} passHref>
           <Navbar.Link>Home</Navbar.Link>
         </NextLink>
-        <NextLink href="/pricing" prefetch={false}>
+        <NextLink href="/pricing" prefetch={false} passHref>
           <Navbar.Link>Pricing</Navbar.Link>
         </NextLink>
-        <NextLink href="/contact" prefetch={false}>
+        <NextLink href="/contact" prefetch={false} passHref>
           <Navbar.Link>Contact</Navbar.Link>
         </NextLink>
-        <NextLink href="/terms" prefetch={false}>
+        <NextLink href="/terms" prefetch={false} passHref>
           <Navbar.Link>Terms</Navbar.Link>
         </NextLink>
       </Navbar.Content>
       <Navbar.Collapse disableAnimation>
         <Navbar.CollapseItem>
-          <NextLink href="/" prefetch={false}>
+          <NextLink href="/" prefetch={false} passHref>
             <Link>Home</Link>
           </NextLink>
         </Navbar.CollapseItem>
         <Navbar.CollapseItem>
-          <NextLink href="/pricing" prefetch={false}>
+          <NextLink href="/pricing" prefetch={false} passHref>
             <Link>Pricing</Link>
           </NextLink>
         </Navbar.CollapseItem>
         <Navbar.CollapseItem>
-          <NextLink href="/contact" prefetch={false}>
+          <NextLink href="/contact" prefetch={false} passHref>
             <Link>Conact</Link>
           </NextLink>
         </Navbar.CollapseItem>
         <Navbar.CollapseItem>
-          <NextLink href="/terms" prefetch={false}>
+          <NextLink href="/terms" prefetch={false} passHref>
             <Link>Terms</Link>
           </NextLink>
         </Navbar.CollapseItem>

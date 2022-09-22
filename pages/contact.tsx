@@ -27,11 +27,11 @@ const Contact: NextPage = () => {
             Befor reaching out we ask that you please review our terms of
             service
           </Text>
-          <NextLink href="/terms">
+          <NextLink href="/terms" prefetch={false} passHref>
             <Link>Terms of Service</Link>
           </NextLink>
           <br />
-          <NextLink href="/pricing">
+          <NextLink href="/pricing" prefetch={false} passHref>
             <Link>Pricing</Link>
           </NextLink>
         </Container>
