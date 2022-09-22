@@ -21,11 +21,11 @@ const Home: NextPage = () => {
         >
           <Text h1>Lawnmowers of Valentine</Text>
           <Text h2>We mow Lawns.</Text>
-          <NextLink href="/pricing" prefetch={false}>
+          <NextLink href="/pricing" prefetch={false} passHref>
             <Link>Pricing</Link>
           </NextLink>
           <Spacer />
-          <NextLink href="/contact" prefetch={false}>
+          <NextLink href="/contact" prefetch={false} passHref>
             <Link>Contact Us</Link>
           </NextLink>
         </Container>
