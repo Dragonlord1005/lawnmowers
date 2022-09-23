@@ -11,7 +11,6 @@ const Price = dynamic(() => import("../components/price/price"), {
 
 const Pricing: NextPage = () => {
   return (
-    <>
       <div>
         <Head>
           <title>Pricing</title>
@@ -33,7 +32,6 @@ const Pricing: NextPage = () => {
           </Suspense>
         </Container>
       </div>
-    </>
   );
 };
 
