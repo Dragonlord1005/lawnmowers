@@ -1,0 +1,8 @@
+diff --git a/esm/table/index.js b/esm/table/index.js
+index a17b48b5a94c7cc0ea30b78cd077bd613441c8a5..bfa2b7b7a73a1a3940820bfff043549b45505e59 100644
+--- a/esm/table/index.js
++++ b/esm/table/index.js
+@@ -1 +1 @@
+-import e from"./table";import l from"./table-pagination";import{TableBody as t,TableColumn as a,TableRow as o,TableCell as r,TableHeader as b}from"./base";export{StyledTable,StyledTableRow,StyledTableCell,StyledTableHeaderCell}from"./table.styles";e.Cell=r,e.Column=a,e.Header=b,e.Row=o,e.Body=t,e.Pagination=l;export default e;
+\ No newline at end of file
++import e from"./table";import{TableBody as t,TableColumn as a,TableRow as o,TableCell as r,TableHeader as b}from"./base";export{StyledTable,StyledTableRow,StyledTableCell,StyledTableHeaderCell}from"./table.styles";e.Cell=r,e.Column=a,e.Header=b,e.Row=o,e.Body=t;export default e;
