@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Text, Container } from "@nextui-org/react";
+import { Text, Loading, Container } from "@nextui-org/react";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
 
@@ -27,7 +27,7 @@ const Pricing: NextPage = () => {
           >
             Pricing
           </Text>
-          <Suspense>
+          <Suspense fallback={<Loading />}>
             <Price />
           </Suspense>
         </Container>
