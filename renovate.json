@@ -19,6 +19,6 @@
       "groupName": "eslint",
       "automerge": true,
       "automergeType": "branch"
-    }
+    },
   ]
 }
