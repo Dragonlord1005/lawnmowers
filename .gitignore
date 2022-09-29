@@ -102,4 +102,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Typescript
+*.tsbuildinfo
+
+# End of https://www.toptal.com/developers/gitignore/api/windows,linux,visualstudiocode,nextjs
+
 # End of https://www.toptal.com/developers/gitignore/api/windows,linux,visualstudiocode,nextjs
