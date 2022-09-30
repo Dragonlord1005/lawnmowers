@@ -1,6 +1,11 @@
 import { Navbar, Link } from "@nextui-org/react";
 import NextLink from "next/link";
-import LightDark from "../LightDark/LightDark";
+// import LightDark from "../LightDark/LightDark";
+import dynamic from "next/dynamic";
+
+const LightDark = dynamic(() => import("../LightDark/LightDark"), {
+  ssr: false,
+});
 
 export default function Nav() {
   return (
