@@ -1,15 +1,15 @@
-import { ReactNode, Suspense } from "react";
+import { Suspense } from "preact/compat";
+import { ComponentChildren } from "preact";
 // import Nav from "./Nav/Nav";
 import dynamic from "next/dynamic";
 import { Loading } from "@nextui-org/react";
 
 const Nav = dynamic(() => import("./Nav/Nav"), {
-  ssr: false,
-  suspense: true,
+  ssr: false
 });
 
 type Props = {
-  children?: ReactNode;
+  children?: ComponentChildren;
 };
 
 const Layout = ({ children }: Props) => (
