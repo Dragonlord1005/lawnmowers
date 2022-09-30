@@ -12,7 +12,7 @@ export default function LightDark() {
         size="xs"
         shadow
         color="primary"
-        onChange={(e: { target: { checked: any; }; }) => setTheme(e.target.checked ? "dark" : "light")}
+        onChange={(e) => setTheme(e.target.checked ? "dark" : "light")}
         iconOn={<BsMoonFill />}
         iconOff={<BsSunFill />}
         css={{

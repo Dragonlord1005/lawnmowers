@@ -1,8 +1,5 @@
 // import "../styles/globals.css";
-// import { ReactElement, ReactNode, Suspense } from "react";
-// we need to use ReactElement and ReactNode in preact
-import { VNode, ComponentChildren } from "preact";
-import { Suspense } from "preact/compat";
+import { ReactElement, ReactNode, Suspense } from "react";
 import type { AppProps } from "next/app";
 import type { NextPage } from "next";
 import Layout from "../components/layout";
@@ -18,7 +15,7 @@ const darkTheme = createTheme({
 });
 
 type NextPageWithLayout = NextPage & {
-  getLayout?: (page: VNode) => ComponentChildren;
+  getLayout?: (page: ReactElement) => ReactNode;
 };
 
 type AppPropsWithLayout = AppProps & {

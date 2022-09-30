@@ -5,7 +5,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
 
-const withPreact = require('next-plugin-preact');
+// const withPreact = require('next-plugin-preact');
 
 const nextConfig = {
   reactStrictMode: true,
@@ -14,6 +14,18 @@ const nextConfig = {
     locales: ["en-US"],
     defaultLocale: "en-US",
   },
+  webpack: (config, { dev }) => {
+    // Replace React with Preact only in client production build
+    if (!dev) {
+      Object.assign(config.resolve.alias, {
+        react: 'preact/compat',
+        'react-dom/test-utils': 'preact/test-utils',
+        'react-dom': 'preact/compat'
+      });
+    }
+
+    return config;
+  }
 };
 
-module.exports = withPreact(withBundleAnalyzer(nextConfig));
+module.exports = withBundleAnalyzer(nextConfig);
