@@ -3,9 +3,7 @@ import NextLink from "next/link";
 // import LightDark from "../LightDark/LightDark";
 import dynamic from "next/dynamic";
 
-const LightDark = dynamic(() => import("../LightDark/LightDark"), {
-  ssr: false,
-});
+const LightDark = dynamic(() => import("@/components/LightDark/LightDark"), {});
 
 export default function Nav() {
   return (

@@ -4,7 +4,6 @@ import dynamic from "next/dynamic";
 import { Loading } from "@nextui-org/react";
 
 const Nav = dynamic(() => import("./Nav/Nav"), {
-  ssr: false,
   suspense: true,
 });
 
