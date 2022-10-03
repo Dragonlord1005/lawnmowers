@@ -12,9 +12,9 @@ const nextConfig = {
     locales: ["en-US"],
     defaultLocale: "en-US",
   },
-  experimental: {
-    runtime: 'experimental-edge',
-  },
+  // experimental: {
+  //   runtime: 'experimental-edge',
+  // },
 };
 
 module.exports = withBundleAnalyzer(nextConfig);

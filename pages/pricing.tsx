@@ -4,6 +4,10 @@ import { Text, Loading, Container } from "@nextui-org/react";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
 
+export const config = {
+  runtime: 'experimental-edge',
+};
+
 const Pricing: NextPage = () => {
   const Price = dynamic(() => import("@/components/price/price"), {
     suspense: true,
