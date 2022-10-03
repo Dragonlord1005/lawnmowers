@@ -1,6 +1,5 @@
 import { Navbar, Link } from "@nextui-org/react";
 import NextLink from "next/link";
-// import LightDark from "../LightDark/LightDark";
 import dynamic from "next/dynamic";
 
 const LightDark = dynamic(() => import("@/components/LightDark/LightDark"), {});
