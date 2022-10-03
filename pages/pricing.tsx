@@ -7,7 +7,7 @@ import { Suspense } from "react";
 const Pricing: NextPage = () => {
   const Price = dynamic(() => import("@/components/price/price"), {
     suspense: true,
-});
+  });
 
   return (
     <div>
@@ -18,17 +18,17 @@ const Pricing: NextPage = () => {
       </Head>
 
       <Container>
-      <Text
-        h1
-        css={{
-          textAlign: "center",
-        }}
-      >
-        Pricing
-      </Text>
-      <Suspense fallback={<Loading />}>
-        <Price />
-      </Suspense>
+        <Text
+          h1
+          css={{
+            textAlign: "center",
+          }}
+        >
+          Pricing
+        </Text>
+        <Suspense fallback={<Loading />}>
+          <Price />
+        </Suspense>
       </Container>
     </div>
   );
