@@ -20,7 +20,7 @@ const Contact: NextPage = () => {
           justify="center"
           direction="column"
         >
-                    <Script
+          <Script
             src="https://www.googletagmanager.com/gtag/js?id=G-83CT70CLK7"
             strategy="afterInteractive"
           />
