@@ -20,7 +20,20 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head>{CssBaseline.flush()}</Head>
+        <Head>{CssBaseline.flush()}
+          <script
+          data-partytown-config
+          dangerouslySetInnerHTML={{
+            __html: `
+              partytown = {
+                lib: "/_next/static/~partytown/",
+                forward: ["dataLayer.push"]
+              };
+            `,
+          }}
+        />
+
+        </Head>
         <body>
           <Main />
           <NextScript />
