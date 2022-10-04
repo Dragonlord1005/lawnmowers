@@ -24,7 +24,6 @@ type AppPropsWithLayout = AppProps & {
 
 function MyApp(props: AppProps) {
   const { Component, pageProps }: AppPropsWithLayout = props;
-  // const getLayout = Component.getLayout ?? ((page) => page);
   return (
     <NextThemesProvider
       defaultTheme="system"
@@ -36,9 +35,9 @@ function MyApp(props: AppProps) {
     >
       <NextUIProvider>
         <Layout>
-          <Suspense fallback={<Loading />}>
+          {/* <Suspense fallback={<Loading />}> */}
             <Component {...pageProps} />
-          </Suspense>
+          {/* </Suspense> */}
         </Layout>
       </NextUIProvider>
     </NextThemesProvider>

@@ -17,7 +17,9 @@
     "baseUrl": ".",
     "paths": {
       "@/components/*": ["components/*"],
-    }
+    },
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment"
 
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
