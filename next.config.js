@@ -12,9 +12,6 @@ const nextConfig = {
     locales: ["en-US"],
     defaultLocale: "en-US",
   },
-  experimental: {
-    nextScriptWorkers: true,
-  },
 };
 
 module.exports = withBundleAnalyzer(nextConfig);

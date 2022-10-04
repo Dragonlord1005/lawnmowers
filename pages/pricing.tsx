@@ -21,9 +21,9 @@ const Pricing: NextPage = () => {
       <Container>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-83CT70CLK7"
-          strategy="worker"
+          strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="worker">
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){window.dataLayer.push(arguments);}
