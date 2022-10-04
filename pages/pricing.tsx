@@ -8,6 +8,7 @@ import Script from "next/script";
 const Pricing: NextPage = () => {
   const Price = dynamic(() => import("@/components/price/price"), {
     suspense: true,
+    ssr: true,
   });
 
   return (
@@ -15,6 +16,7 @@ const Pricing: NextPage = () => {
       <Head>
         <title>Pricing</title>
         <meta name="description" content="Our Pricing" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
