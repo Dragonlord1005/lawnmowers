@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Script from "next/script";
 import Head from "next/head";
 import NextLink from "next/link";
 import { Text, Link, Spacer, Container } from "@nextui-org/react";
@@ -12,13 +13,26 @@ const Home: NextPage = () => {
           <meta name="description" content="We mow lawns" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-
         <Container
           alignItems="center"
           display="flex"
           justify="center"
           direction="column"
         >
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-83CT70CLK7"
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-83CT70CLK7');
+        `}
+          </Script>
+
           <Text h1>Lawnmowers of Valentine</Text>
           <Text h2>We mow Lawns.</Text>
           <NextLink href="/pricing" prefetch={false} passHref>

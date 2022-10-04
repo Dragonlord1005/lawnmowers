@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Container, Text } from "@nextui-org/react";
+import Script from "next/script";
 
 const Terms: NextPage = () => {
   return (
@@ -18,6 +19,20 @@ const Terms: NextPage = () => {
           justify="center"
           direction="column"
         >
+                    <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-83CT70CLK7"
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-83CT70CLK7');
+        `}
+          </Script>
+
           <Text h1>Terms of Service</Text>
           <Text h4>
             We ask that you read our terms of service before using our services.

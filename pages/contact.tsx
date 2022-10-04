@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import NextLink from "next/link";
 import { Text, Link, Container } from "@nextui-org/react";
+import Script from "next/script";
 
 const Contact: NextPage = () => {
   return (
@@ -19,6 +20,20 @@ const Contact: NextPage = () => {
           justify="center"
           direction="column"
         >
+                    <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-83CT70CLK7"
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-83CT70CLK7');
+        `}
+          </Script>
+
           <Text h1>Contact Us</Text>
           <Text h2>Where to contact us:</Text>
           <Text h3>Email: lawnmowers.of.valentine@gmail.com</Text>
